@@ -101,7 +101,16 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
                 <!-- Feature 1: AI Target Recognition -->
                 <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold text-white mb-3">AI Target Recognition</h3>
+                    <div class="flex items-start justify-between mb-4 gap-4">
+                        <h3 class="text-2xl font-bold text-white m-0">AI Target Recognition</h3>
+                        <div class="shrink-0 w-12 h-12 flex items-center justify-center rounded-md bg-gray-800">
+                            <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="3" />
+                                <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+                                <path d="M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M19.07 4.93l-2.83 2.83M7.76 16.24l-2.83 2.83" />
+                            </svg>
+                        </div>
+                    </div>
                     <p class="text-gray-400">
                         Our neural network, trained on a proprietary dataset, capably recognizes various target classes including UAVs, vehicles, and personnel.
                     </p>
@@ -109,7 +118,16 @@
 
                 <!-- Feature 2: GPS-Independent Autonomy -->
                 <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold text-white mb-3">GPS-Independent Autonomy</h3>
+                    <div class="flex items-start justify-between mb-4 gap-4">
+                        <h3 class="text-2xl font-bold text-white m-0">GPS-Independent Autonomy</h3>
+                        <div class="shrink-0 w-12 h-12 flex items-center justify-center rounded-md bg-gray-800">
+                            <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 3v2M12 19v2M3 12h2M19 12h2" />
+                                <path d="M10 14.5l2-5 2 5-2 1-2-1z" />
+                            </svg>
+                        </div>
+                    </div>
                     <p class="text-gray-400">
                         After target acquisition, the onboard computer autonomously guides the UAV. This process is independent of GPS, making it resilient to spoofing and jamming.
                     </p>
@@ -117,7 +135,16 @@
 
                 <!-- Feature 3: Advanced Simulation -->
                 <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold text-white mb-3">Advanced Simulation</h3>
+                    <div class="flex items-start justify-between mb-4 gap-4">
+                        <h3 class="text-2xl font-bold text-white m-0">Advanced Simulation</h3>
+                        <div class="shrink-0 w-12 h-12 flex items-center justify-center rounded-md bg-gray-800">
+                            <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 2 20 6 12 10 4 6 12 2Z" />
+                                <path d="M4 6v10l8 4 8-4V6" />
+                                <path d="M4 11.5l8 4 8-4" />
+                            </svg>
+                        </div>
+                    </div>
                     <p class="text-gray-400">
                         We utilize Gazebo, AirSim, and SITL simulations, alongside custom solutions and integration testing, to rapidly validate hypotheses and enhance field trial effectiveness.
                     </p>
@@ -127,7 +154,9 @@
             <!-- Thermal Vision Section -->
             <div class="md:flex items-center mt-20 bg-gray-900 rounded-lg shadow-lg overflow-hidden">
                 <div class="md:w-1/2">
-                    <img src="thermal_view.jpg" alt="Thermal Vision Drone View" class="w-full h-full object-cover" loading="lazy">
+                    <video src="thermal_video.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline aria-label="Thermal Vision Drone View">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="md:w-1/2 p-8 md:p-12">
                     <h2 class="text-3xl font-bold text-gold mb-4">Thermal Camera Integration</h2>
