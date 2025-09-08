@@ -69,16 +69,23 @@
 </head>
 <body class="text-white">
 
+    <!-- Language Switcher -->
+    <div id="lang-switcher" class="fixed top-4 right-4 z-50 flex items-center gap-2 text-sm bg-black/30 backdrop-blur rounded-full px-2 py-1 border border-white/10">
+        <button type="button" data-set-lang="en" class="px-2 py-0.5 rounded hover:text-white text-white/80">EN</button>
+        <span class="text-white/30 select-none">|</span>
+        <button type="button" data-set-lang="ua" class="px-2 py-0.5 rounded hover:text-white text-white/80">UA</button>
+    </div>
+
     <!-- Hero Section -->
     <div class="hero-section bg-black">
         <h1 class="leading-tight">
             <span class="snipel-text block">SNIPEL</span>
             <span class="system-text text-gold block">SYSTEMS</span>
         </h1>
-        <p class="subtitle-text text-gray-300 whitespace-nowrap overflow-x-auto">
+        <p class="subtitle-text text-gray-300 whitespace-nowrap overflow-x-auto" data-i18n="hero.subtitle">
             Cost-effective, AI-based Last Mile Targeting Solution for Drones
         </p>
-        <span class="mt-2 inline-block uppercase tracking-wider text-sm text-gold border border-[#D9B24F]/40 rounded-full px-3 py-1 bg-white/5">
+        <span class="mt-2 inline-block uppercase tracking-wider text-sm text-gold border border-[#D9B24F]/40 rounded-full px-3 py-1 bg-white/5" data-i18n="hero.badge">
             GPS-Independent Autonomy
         </span>
     </div>
@@ -89,13 +96,13 @@
             <!-- RGB Vision Section -->
             <div class="md:flex items-center mt-20 bg-black rounded-lg shadow-lg overflow-hidden">
                 <div class="md:w-1/2">
-                    <video src="rgb_video.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline aria-label="RGB Camera Drone View">
-                        Your browser does not support the video tag.
+                    <video src="rgb_video.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline aria-label="RGB Camera Drone View" data-i18n-aria-label="video.rgb.aria">
+                        <span data-i18n="video.fallback">Your browser does not support the video tag.</span>
                     </video>
                 </div>
                 <div class="md:w-1/2 p-8 md:p-12">
-                    <h2 class="text-3xl font-bold text-gold mb-4">AI Target Recognition</h2>
-                    <p class="text-lg text-gray-300">
+                    <h2 class="text-3xl font-bold text-gold mb-4" data-i18n="features.rgb.title">AI Target Recognition</h2>
+                    <p class="text-lg text-gray-300" data-i18n="features.rgb.body">
                         Our neural network, trained on a proprietary dataset, capably recognizes various target classes including UAVs, vehicles, and personnel.
                     </p>
                 </div>
@@ -104,13 +111,13 @@
             <!-- Thermal Vision Section -->
             <div class="md:flex md:flex-row-reverse items-center mt-20 bg-black rounded-lg shadow-lg overflow-hidden">
                 <div class="md:w-1/2">
-                    <video src="thermal_video.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline aria-label="Thermal Vision Drone View">
-                        Your browser does not support the video tag.
+                    <video src="thermal_video.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline aria-label="Thermal Vision Drone View" data-i18n-aria-label="video.thermal.aria">
+                        <span data-i18n="video.fallback">Your browser does not support the video tag.</span>
                     </video>
                 </div>
                 <div class="md:w-1/2 p-8 md:p-12">
-                    <h2 class="text-3xl font-bold text-gold mb-4">Thermal Camera Integration</h2>
-                    <p class="text-lg text-gray-300">
+                    <h2 class="text-3xl font-bold text-gold mb-4" data-i18n="features.thermal.title">Thermal Camera Integration</h2>
+                    <p class="text-lg text-gray-300" data-i18n="features.thermal.body">
                         Our system is fully capable of identifying and tracking targets using thermal imaging, ensuring operational effectiveness in various visibility conditions, day or night.
                     </p>
                 </div>
@@ -118,13 +125,13 @@
             <!-- Simulation Section -->
             <div class="md:flex items-center mt-20 bg-black rounded-lg shadow-lg overflow-hidden">
                 <div class="md:w-1/2">
-                    <video src="sim_video.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline aria-label="Simulation Environment View">
-                        Your browser does not support the video tag.
+                    <video src="sim_video.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline aria-label="Simulation Environment View" data-i18n-aria-label="video.sim.aria">
+                        <span data-i18n="video.fallback">Your browser does not support the video tag.</span>
                     </video>
                 </div>
                 <div class="md:w-1/2 p-8 md:p-12">
-                    <h2 class="text-3xl font-bold text-gold mb-4">Advanced Simulation</h2>
-                    <p class="text-lg text-gray-300">
+                    <h2 class="text-3xl font-bold text-gold mb-4" data-i18n="features.sim.title">Advanced Simulation</h2>
+                    <p class="text-lg text-gray-300" data-i18n="features.sim.body">
                         We leverage state-of-the-art simulation environments, alongside custom solutions and integration testing, to rapidly validate hypotheses and enhance field trial effectiveness.
                     </p>
                 </div>
@@ -134,11 +141,11 @@
              <!-- Hardware section -->
             <div class="md:flex md:flex-row-reverse items-center mt-20 bg-black rounded-lg shadow-lg overflow-hidden">
                 <div class="md:w-1/2">
-                    <img src="01.png" alt="SNIPEL hardware module - board and camera" class="w-full h-full object-cover" loading="lazy">
+                    <img src="01.png" alt="SNIPEL hardware module - board and camera" class="w-full h-full object-cover" loading="lazy" data-i18n-alt="hardware.img.alt">
                 </div>
                 <div class="md:w-1/2 p-8 md:p-12">
-                    <h2 class="text-3xl font-bold text-gold mb-4">Specialized Hardware Module</h2>
-                    <p class="text-lg text-gray-300">
+                    <h2 class="text-3xl font-bold text-gold mb-4" data-i18n="features.hw.title">Specialized Hardware Module</h2>
+                    <p class="text-lg text-gray-300" data-i18n="features.hw.body">
                         While our software is compatible with various hardware platforms, we are also creating a specialized hardware module (comprising a board and camera) to ensure optimal performance.
                     </p>
                 </div>
@@ -149,18 +156,132 @@
     <!-- Contact Section -->
     <footer class="section-padding !pt-20 !pb-20 bg-gray-900">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-gold mb-4">Contact Us</h2>
-            <p class="text-lg text-gray-300 mb-6">
+            <h2 class="text-3xl font-bold text-gold mb-4" data-i18n="footer.contact">Contact Us</h2>
+            <p class="text-lg text-gray-300 mb-6" data-i18n="footer.lead">
                 Have questions or want to learn more? Reach out to us.
             </p>
             <a href="mailto:snipel.system@gmail.com" class="text-xl text-white hover:text-gold transition duration-300">
                 snipel.system@gmail.com
             </a>
             <div class="mt-8 text-gray-500">
-                <p>&copy; 2023 SNIPEL SYSTEMS. All Rights Reserved.</p>
+                <p>&copy; 2023 SNIPEL SYSTEMS. <span data-i18n="footer.rights">All Rights Reserved.</span></p>
             </div>
         </div>
     </footer>
+
+    <script>
+      (function() {
+        const translations = {
+          en: {
+            'hero.subtitle': 'Cost-effective, AI-based Last Mile Targeting Solution for Drones',
+            'hero.badge': 'GPS-Independent Autonomy',
+
+            'features.rgb.title': 'AI Target Recognition',
+            'features.rgb.body': 'Our neural network, trained on a proprietary dataset, capably recognizes various target classes including UAVs, vehicles, and personnel.',
+
+            'features.thermal.title': 'Thermal Camera Integration',
+            'features.thermal.body': 'Our system is fully capable of identifying and tracking targets using thermal imaging, ensuring operational effectiveness in various visibility conditions, day or night.',
+
+            'features.sim.title': 'Advanced Simulation',
+            'features.sim.body': 'We leverage state-of-the-art simulation environments, alongside custom solutions and integration testing, to rapidly validate hypotheses and enhance field trial effectiveness.',
+
+            'features.hw.title': 'Specialized Hardware Module',
+            'features.hw.body': 'While our software is compatible with various hardware platforms, we are also creating a specialized hardware module (comprising a board and camera) to ensure optimal performance.',
+
+            'footer.contact': 'Contact Us',
+            'footer.lead': 'Have questions or want to learn more? Reach out to us.',
+            'footer.rights': 'All Rights Reserved.',
+
+            'video.rgb.aria': 'RGB Camera Drone View',
+            'video.thermal.aria': 'Thermal Vision Drone View',
+            'video.sim.aria': 'Simulation Environment View',
+
+            'hardware.img.alt': 'SNIPEL hardware module - board and camera',
+            'video.fallback': 'Your browser does not support the video tag.'
+          },
+          ua: {
+            'hero.subtitle': 'Доступне, AI‑кероване рішення останньої милі для наведення дронів',
+            'hero.badge': 'Автономність без GPS',
+
+            'features.rgb.title': 'Розпізнавання цілей ШІ',
+            'features.rgb.body': 'Наша нейромережа, навчена на власному датасеті, впевнено розпізнає різні класи цілей, зокрема БпЛА, техніку та особовий склад.',
+
+            'features.thermal.title': 'Інтеграція тепловізійної камери',
+            'features.thermal.body': 'Наша система ідентифікує та відстежує цілі за тепловізійним зображенням, забезпечуючи ефективність у будь‑яких умовах видимості вдень і вночі.',
+
+            'features.sim.title': 'Просунуте моделювання',
+            'features.sim.body': 'Ми використовуємо найсучасніші середовища моделювання разом із власними рішеннями та інтеграційним тестуванням, щоб швидко перевіряти гіпотези та підвищувати ефективність польових випробувань.',
+
+            'features.hw.title': 'Спеціалізований апаратний модуль',
+            'features.hw.body': 'Наше ПЗ сумісне з різними апаратними платформами, а також ми створюємо спеціалізований модуль (плата й камера) для забезпечення оптимальної продуктивності.',
+
+            'footer.contact': "Зв'язатися з нами",
+            'footer.lead': 'Маєте запитання або хочете дізнатися більше? Напишіть нам.',
+            'footer.rights': 'Усі права захищено.',
+
+            'video.rgb.aria': 'Вигляд з дрона (RGB‑камера)',
+            'video.thermal.aria': 'Вигляд з дрона (тепловізор)',
+            'video.sim.aria': 'Вигляд середовища моделювання',
+
+            'hardware.img.alt': 'Модуль SNIPEL — плата та камера',
+            'video.fallback': 'Ваш браузер не підтримує відеотег.'
+          }
+        };
+
+        function applyTranslations(lang) {
+          const dict = translations[lang] || translations.en;
+          // text content
+          document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const val = dict[key];
+            if (typeof val === 'string') el.textContent = val;
+          });
+          // attributes
+          document.querySelectorAll('*').forEach(el => {
+            for (const attr of Array.from(el.attributes)) {
+              if (attr.name.startsWith('data-i18n-') && attr.name !== 'data-i18n') {
+                const targetAttr = attr.name.replace('data-i18n-', '');
+                const key = attr.value;
+                const val = dict[key];
+                if (typeof val === 'string') el.setAttribute(targetAttr, val);
+              }
+            }
+          });
+          // html lang attribute (IANA: uk for Ukrainian)
+          document.documentElement.setAttribute('lang', lang === 'ua' ? 'uk' : 'en');
+        }
+
+        function updateLangSwitcherUI(lang) {
+          document.querySelectorAll('#lang-switcher [data-set-lang]').forEach(btn => {
+            const active = btn.getAttribute('data-set-lang') === lang;
+            btn.classList.toggle('text-gold', active);
+            btn.classList.toggle('font-bold', active);
+            btn.classList.toggle('text-white/80', !active);
+          });
+        }
+
+        function setLanguage(lang) {
+          const available = Object.keys(translations);
+          const safe = available.includes(lang) ? lang : 'en';
+          localStorage.setItem('lang', safe);
+          applyTranslations(safe);
+          updateLangSwitcherUI(safe);
+        }
+
+        // Hook up events
+        document.getElementById('lang-switcher').addEventListener('click', (e) => {
+          const btn = e.target.closest('[data-set-lang]');
+          if (!btn) return;
+          const lang = btn.getAttribute('data-set-lang');
+          setLanguage(lang);
+        });
+
+        // Init from storage or default to EN
+        const stored = localStorage.getItem('lang');
+        const initial = stored && (stored === 'en' || stored === 'ua') ? stored : 'en';
+        setLanguage(initial);
+      })();
+    </script>
 
 </body>
 </html>
