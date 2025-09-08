@@ -7,9 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
+        html, body {
             font-family: 'Inter', sans-serif;
-            background-color: #000000; /* Black background */
+            background-color: #000000; /* Force black background for entire page */
         }
         .text-gold {
             color: #D9B24F; /* Custom gold color */
@@ -36,10 +36,12 @@
         .subtitle-text {
             font-size: 1.25rem; /* default for larger screens */
             margin-top: 1.5rem;
-            max-width: 600px; /* Limit width for readability */
+            /* Keep subtitle on a single line */
+            white-space: nowrap;
+            max-width: none;
         }
         .section-padding {
-            padding: 5rem 1.5rem; /* reduced from 8rem to tighten space above 'Our Product' */
+            padding: 5rem 1.5rem; /* section spacing */
         }
 
         /* Responsive text sizes */
@@ -68,91 +70,36 @@
 <body class="text-white">
 
     <!-- Hero Section -->
-    <div class="hero-section">
+    <div class="hero-section bg-black">
         <h1 class="leading-tight">
             <span class="snipel-text block">SNIPEL</span>
             <span class="system-text text-gold block">SYSTEMS</span>
         </h1>
-        <p class="subtitle-text text-gray-300">
+        <p class="subtitle-text text-gray-300 whitespace-nowrap overflow-x-auto">
             Cost-effective, AI-based Last Mile Targeting Solution for Drones
         </p>
-        <div class="mt-2">
-            <img src="01.png"
-                 alt="SNIPEL Onboard Computer and Camera"
-                 class="rounded-lg shadow-xl mx-auto w-full max-w-md md:max-w-lg lg:max-w-xl"
-                 onerror="this.onerror=null; this.src='https://placehold.co/600x300/1F2937/E0E0E0?text=Image+Not+Available';"
-            >
-        </div>
     </div>
 
     <!-- Features Section -->
     <div id="features" class="bg-black section-padding pt-4">
         <div class="container mx-auto">
-
-            <!-- Product Section -->
-            <div class="text-center mb-8">
-                <h2 class="text-4xl font-bold text-gold mb-4">Our Product</h2>
-                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-                    We develop AI-based software for the recognition and autonomous engagement of air and ground targets. Our solution can be integrated with fixed-wing kamikaze drones and multi-rotors running Ardupilot.
-                </p>
-            </div>
-
-            <!-- Key Features Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <!-- Feature 1: AI Target Recognition -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
-                    <div class="flex items-start justify-between mb-4 gap-4">
-                        <h3 class="text-2xl font-bold text-white m-0">AI Target Recognition</h3>
-                        <div class="shrink-0 w-12 h-12 flex items-center justify-center rounded-md bg-gray-800">
-                            <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <circle cx="12" cy="12" r="3" />
-                                <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
-                                <path d="M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M19.07 4.93l-2.83 2.83M7.76 16.24l-2.83 2.83" />
-                            </svg>
-                        </div>
-                    </div>
-                    <p class="text-gray-400">
+            <!-- RGB Vision Section -->
+            <div class="md:flex items-center mt-20 bg-black rounded-lg shadow-lg overflow-hidden">
+                <div class="md:w-1/2">
+                    <video src="rgb_video.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline aria-label="RGB Camera Drone View">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-gold mb-4">AI Target Recognition</h2>
+                    <p class="text-lg text-gray-300">
                         Our neural network, trained on a proprietary dataset, capably recognizes various target classes including UAVs, vehicles, and personnel.
-                    </p>
-                </div>
-
-                <!-- Feature 2: GPS-Independent Autonomy -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
-                    <div class="flex items-start justify-between mb-4 gap-4">
-                        <h3 class="text-2xl font-bold text-white m-0">GPS-Independent Autonomy</h3>
-                        <div class="shrink-0 w-12 h-12 flex items-center justify-center rounded-md bg-gray-800">
-                            <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <circle cx="12" cy="12" r="9" />
-                                <path d="M12 3v2M12 19v2M3 12h2M19 12h2" />
-                                <path d="M10 14.5l2-5 2 5-2 1-2-1z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <p class="text-gray-400">
-                        After target acquisition, the onboard computer autonomously guides the UAV. This process is independent of GPS, making it resilient to spoofing and jamming.
-                    </p>
-                </div>
-
-                <!-- Feature 3: Advanced Simulation -->
-                <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
-                    <div class="flex items-start justify-between mb-4 gap-4">
-                        <h3 class="text-2xl font-bold text-white m-0">Advanced Simulation</h3>
-                        <div class="shrink-0 w-12 h-12 flex items-center justify-center rounded-md bg-gray-800">
-                            <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M12 2 20 6 12 10 4 6 12 2Z" />
-                                <path d="M4 6v10l8 4 8-4V6" />
-                                <path d="M4 11.5l8 4 8-4" />
-                            </svg>
-                        </div>
-                    </div>
-                    <p class="text-gray-400">
-                        We utilize Gazebo, AirSim, and SITL simulations, alongside custom solutions and integration testing, to rapidly validate hypotheses and enhance field trial effectiveness.
                     </p>
                 </div>
             </div>
 
             <!-- Thermal Vision Section -->
-            <div class="md:flex items-center mt-20 bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+            <div class="md:flex items-center mt-20 bg-black rounded-lg shadow-lg overflow-hidden">
                 <div class="md:w-1/2">
                     <video src="thermal_video.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline aria-label="Thermal Vision Drone View">
                         Your browser does not support the video tag.
@@ -165,12 +112,43 @@
                     </p>
                 </div>
             </div>
+            <!-- Simulation Section -->
+            <div class="md:flex items-center mt-20 bg-black rounded-lg shadow-lg overflow-hidden">
+                <div class="md:w-1/2">
+                    <video src="sim_video.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline aria-label="Simulation Environment View">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-gold mb-4">Advanced Simulation</h2>
+                    <p class="text-lg text-gray-300">
+                        We leverage state-of-the-art simulation environments, alongside custom solutions and integration testing, to rapidly validate hypotheses and enhance field trial effectiveness.
+                    </p>
+                </div>
+            </div>
+            <!-- End Simulation Section -->
 
+             <!-- Hardware section -->
+            <div class="md:flex items-center mt-20 bg-black rounded-lg shadow-lg overflow-hidden">
+                <div class="md:w-1/2">
+                    <img src="01.png" alt="SNIPEL hardware module - board and camera" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-gold mb-4">GPS-Independent Autonomy</h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        After target acquisition, the onboard computer autonomously guides the UAV. This process is independent of GPS, making it resilient to spoofing and jamming.
+                    </p>
+                    <h2 class="text-3xl font-bold text-gold mb-4">Specialized Hardware Module</h2>
+                    <p class="text-lg text-gray-300">
+                        While our software is compatible with various hardware platforms, we are also creating a specialized hardware module (comprising a board and camera) to ensure optimal performance.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Contact Section -->
-    <footer class="bg-gray-900 section-padding !pt-20 !pb-20">
+    <footer class="section-padding !pt-20 !pb-20 bg-gray-900">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold text-gold mb-4">Contact Us</h2>
             <p class="text-lg text-gray-300 mb-6">
