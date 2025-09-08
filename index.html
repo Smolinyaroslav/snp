@@ -36,8 +36,12 @@
         .subtitle-text {
             font-size: 1.25rem; /* default for larger screens */
             margin-top: 1.5rem;
-            /* Keep subtitle on a single line */
-            white-space: nowrap;
+            /* Allow wrapping everywhere to avoid horizontal scroll on phones */
+            white-space: normal;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            text-wrap: balance;
             max-width: none;
         }
         .section-padding {
@@ -52,12 +56,13 @@
             }
             .subtitle-text {
                 font-size: 1.125rem;
-                /* Allow wrapping on small screens and avoid horizontal scroll */
+                /* Keep wrapping and avoid horizontal scroll */
                 white-space: normal;
                 overflow-x: visible;
                 overflow: visible;
                 overflow-wrap: break-word;
                 hyphens: auto;
+                -webkit-hyphens: auto;
             }
             .section-padding {
                  padding: 5rem 1.5rem;
@@ -206,14 +211,14 @@
             'video.fallback': 'Your browser does not support the video tag.'
           },
           ua: {
-            'hero.subtitle': 'Доступ��е, AI‑кероване рішення останньої милі для наведення дронів',
+            'hero.subtitle': 'Доступне, AI‑кероване рішення останньої милі для наведення дронів',
             'hero.badge': 'Автономність без GPS',
 
             'features.rgb.title': 'Розпізнавання цілей ШІ',
             'features.rgb.body': 'Наша нейромережа, навчена на власному датасеті, впевнено розпізнає різні класи цілей, зокрема БпЛА, техніку та особовий склад.',
 
             'features.thermal.title': 'Інтеграція тепловізійної камери',
-            'features.thermal.body': 'Наша система ідентифікує та відстежує цілі за тепловізійним зображенням, забезпечуючи ефектив��ість у будь‑яких умовах видимості вдень і вночі.',
+            'features.thermal.body': 'Наша система ідентифікує та відстежує цілі за тепловізійним зображенням, забезпечуючи ефективність у будь‑яких умовах видимості вдень і вночі.',
 
             'features.sim.title': 'Просунуте моделювання',
             'features.sim.body': 'Ми використовуємо найсучасніші середовища моделювання разом із власними рішеннями та інтеграційним тестуванням, щоб швидко перевіряти гіпотези та підвищувати ефективність польових випробувань.',
