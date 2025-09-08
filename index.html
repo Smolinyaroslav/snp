@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNIPEL SYSTEM</title>
+    <title>SNIPEL SYSTEMS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #000000; /* Changed to black */
+            background-color: #000000; /* Black background */
         }
         .text-gold {
-            color: #D9B24F; /* Custom gold color from the image */
+            color: #D9B24F; /* Custom gold color */
         }
         .hero-section {
-            height: 100vh; /* Full viewport height */
+            /* ultra-tight layout */
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             text-align: center;
-            padding: 20px;
+            padding: 2rem 20px 0.5rem; /* was 3rem 20px 1rem */
         }
         .snipel-text {
             font-size: 4rem; /* default for larger screens */
@@ -38,14 +38,21 @@
             margin-top: 1.5rem;
             max-width: 600px; /* Limit width for readability */
         }
+        .section-padding {
+            padding: 5rem 1.5rem; /* reduced from 8rem to tighten space above 'Our Product' */
+        }
 
         /* Responsive text sizes */
         @media (max-width: 768px) { /* md breakpoint */
+            .hero-section { padding: 1.75rem 16px 0.25rem; }
             .snipel-text, .system-text {
                 font-size: 3rem;
             }
             .subtitle-text {
                 font-size: 1.125rem;
+            }
+            .section-padding {
+                 padding: 5rem 1.5rem;
             }
         }
         @media (max-width: 480px) { /* sm breakpoint */
@@ -60,32 +67,94 @@
 </head>
 <body class="text-white">
 
+    <!-- Hero Section -->
     <div class="hero-section">
         <h1 class="leading-tight">
             <span class="snipel-text block">SNIPEL</span>
             <span class="system-text text-gold block">SYSTEM</span>
         </h1>
-
         <p class="subtitle-text text-gray-300">
-            Cost-effective, AI-based Last Mile Targeting Solution for FPV Drones
+            Cost-effective, AI-based Last Mile Targeting Solution for Drones
         </p>
-
-
-        <div class="mt-12">
+        <div class="mt-2">
             <img src="01.png"
-                 alt="AI Drone Concept"
+                 alt="SNIPEL Onboard Computer and Camera"
                  class="rounded-lg shadow-xl mx-auto w-full max-w-md md:max-w-lg lg:max-w-xl"
                  onerror="this.onerror=null; this.src='https://placehold.co/600x300/1F2937/E0E0E0?text=Image+Not+Available';"
             >
         </div>
+    </div>
 
+    <!-- Features Section -->
+    <div id="features" class="bg-black section-padding pt-4">
+        <div class="container mx-auto">
 
-        <div class="mt-10">
-           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-               class="bg-yellow-600 hover:bg-transparent hover:text-gold text-gray-900 font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 border-2 border-yellow-600">
-                Learn More
-           </a>
+            <!-- Product Section -->
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold text-gold mb-4">Our Product</h2>
+                <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                    We develop AI-based software for the recognition and autonomous engagement of air and ground targets. Our solution can be integrated with fixed-wing kamikaze drones and multi-rotors running Ardupilot.
+                </p>
+            </div>
+
+            <!-- Key Features Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Feature 1: AI Target Recognition -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-white mb-3">AI Target Recognition</h3>
+                    <p class="text-gray-400">
+                        Our neural network, trained on a proprietary dataset, capably recognizes various target classes including UAVs, vehicles, and personnel.
+                    </p>
+                </div>
+
+                <!-- Feature 2: GPS-Independent Autonomy -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-white mb-3">GPS-Independent Autonomy</h3>
+                    <p class="text-gray-400">
+                        After target acquisition, the onboard computer autonomously guides the UAV. This process is independent of GPS, making it resilient to spoofing and jamming.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Advanced Simulation -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-white mb-3">Advanced Simulation</h3>
+                    <p class="text-gray-400">
+                        We utilize Gazebo, AirSim, and SITL simulations, alongside custom solutions and integration testing, to rapidly validate hypotheses and enhance field trial effectiveness.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Thermal Vision Section -->
+            <div class="md:flex items-center mt-20 bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+                <div class="md:w-1/2">
+                    <img src="thermal_view.jpg" alt="Thermal Vision Drone View" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-gold mb-4">Thermal Camera Integration</h2>
+                    <p class="text-lg text-gray-300">
+                        Our system is fully capable of identifying and tracking targets using thermal imaging, ensuring operational effectiveness in various visibility conditions, day or night.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </div>
+
+    <!-- Contact Section -->
+    <footer class="bg-gray-900 section-padding !pt-20 !pb-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gold mb-4">Contact Us</h2>
+            <p class="text-lg text-gray-300 mb-6">
+                Have questions or want to learn more? Reach out to us.
+            </p>
+            <a href="mailto:snipel.system@gmail.com" class="text-xl text-white hover:text-gold transition duration-300">
+                snipel.system@gmail.com
+            </a>
+            <div class="mt-8 text-gray-500">
+                <p>&copy; 2023 SNIPEL SYSTEMS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
